@@ -5,59 +5,51 @@
 
 :root {
   /* Template brand tokens: edit these first when re-branding a new dance school. */
-  --template-font-sans: 'Jost', 'Jost Fallback', sans-serif;
-  --template-font-serif: 'Bodoni Moda', 'Bodoni Moda Fallback', serif;
+  --template-font-sans: var(--font-dm-sans), 'DM Sans', sans-serif;
+  --template-font-serif: var(--font-playfair), 'Playfair Display', serif;
   --template-font-display: var(--font-dancing);
   --template-brand-name: "Dance Studio";
-  --template-nav-bg: #0F0E0A;
-  --template-hero-glow: #2A1F0A;
-  --template-card-hover: #120F06;
-  --template-accent-subtle: #C9980A44;
-  --template-error: #C8003A;
+  --template-nav-bg: rgba(247, 243, 238, 0.94);
+  --template-hero-glow: #EFE7DD;
+  --template-card-hover: #F4EEE8;
+  --template-accent-subtle: #C97C6D33;
+  --template-error: #B84F5E;
   --template-whatsapp: #25D366;
 
   /* Active theme palette */
-  --background: #0F0E0A;
-  /* Page background */
-  --foreground: #F5EDD8;
-  /* Primary text - ivory */
-  --card: #0A0905;
-  /* Card/surface background */
-  --card-foreground: #F5EDD8;
-  --popover: #0A0905;
-  --popover-foreground: #F5EDD8;
-  --primary: #C9980A;
-  /* Accent gold - CTAs, highlights, active states */
-  --primary-foreground: #0A0905;
-  /* Dark text on gold */
-  --secondary: #1A1408;
-  /* Slightly lighter surface */
-  --secondary-foreground: #F5EDD8;
-  --muted: #2A2010;
-  --muted-foreground: #B8A080;
-  /* Muted text */
-  --accent: #C9980A;
-  /* Gold accent */
-  --accent-foreground: #0A0905;
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #F5EDD8;
-  --border: #2A2010;
-  --input: #1A1408;
-  --ring: #C9980A;
-  --chart-1: #C9980A;
-  --chart-2: #B8A080;
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --background: #F7F3EE;
+  --foreground: #2B2B2B;
+  --card: #FAF8F5;
+  --card-foreground: #2B2B2B;
+  --popover: #FAF8F5;
+  --popover-foreground: #2B2B2B;
+  --primary: #C97C6D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EFE7DD;
+  --secondary-foreground: #2B2B2B;
+  --muted: #EFE7DD;
+  --muted-foreground: #7A6F68;
+  --accent: #C6A87A;
+  --accent-foreground: #2B2B2B;
+  --destructive: #B84F5E;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2D6CA;
+  --input: #EFE7DD;
+  --ring: #C97C6D;
+  --chart-1: #C97C6D;
+  --chart-2: #C6A87A;
+  --chart-3: #B98D82;
+  --chart-4: #D8BFAE;
+  --chart-5: #7A6F68;
   --radius: 0.5rem;
-  --sidebar: #0A0905;
-  --sidebar-foreground: #F5EDD8;
-  --sidebar-primary: #C9980A;
-  --sidebar-primary-foreground: #0A0905;
-  --sidebar-accent: #C9980A;
-  --sidebar-accent-foreground: #0A0905;
-  --sidebar-border: #2A2010;
-  --sidebar-ring: #C9980A;
+  --sidebar: #FAF8F5;
+  --sidebar-foreground: #2B2B2B;
+  --sidebar-primary: #C97C6D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #C6A87A;
+  --sidebar-accent-foreground: #2B2B2B;
+  --sidebar-border: #E2D6CA;
+  --sidebar-ring: #C97C6D;
 }
 
 @theme inline {

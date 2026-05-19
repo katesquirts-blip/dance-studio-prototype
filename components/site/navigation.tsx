@@ -17,8 +17,6 @@ const mobileNavGroups: NavLink[][] = [
   [
     { href: "#chi-siamo", label: "Chi Siamo" },
     { href: "#corsi", label: "Corsi" },
-    { href: "#mamma-e-figlia", label: "Mamma & Figlia" },
-    { href: "#formazione", label: "Formazione" },
   ],
   [
     { href: "#orari", label: "Orari" },
@@ -40,18 +38,20 @@ export function Navigation({
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-[var(--template-nav-bg)] border-b border-[var(--template-accent-subtle)]" : "bg-transparent"
+        isScrolled
+          ? "border-b border-[var(--template-accent-subtle)] bg-[var(--template-nav-bg)] shadow-sm shadow-primary/10 backdrop-blur-md"
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between py-4 sm:h-20 lg:h-24">
-          <a href="#" className="z-[60] flex flex-col space-y-0">
-            <img
-              src={brand.logo}
-              alt={`${brand.shortName} logo`}
-              className="h-12 w-auto object-contain sm:h-16 lg:h-20"
-              style={{ filter: "brightness(0) invert(1)" }}
-            />
+        <div className="flex h-16 items-center justify-between py-4 sm:h-20 lg:h-22">
+          <a href="#" className="z-[60] flex flex-col leading-none">
+            <span className="font-serif text-2xl font-semibold tracking-wide text-foreground sm:text-3xl">
+              {brand.shortName}
+            </span>
+            <span className="mt-1 hidden text-[10px] font-medium tracking-[0.28em] text-muted-foreground uppercase sm:block">
+              Beauty & Fitness
+            </span>
           </a>
 
           <div className="hidden items-center gap-6 lg:flex">
@@ -61,7 +61,7 @@ export function Navigation({
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium transition-colors ${
-                    activeSection === link.href.slice(1) ? "text-primary" : "text-foreground hover:text-primary"
+                    activeSection === link.href.slice(1) ? "text-primary" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {link.label}
@@ -70,14 +70,14 @@ export function Navigation({
             </div>
             <a
               href="#contatti"
-              className="rounded-sm bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition-all hover:scale-105 hover:bg-primary/90 active:scale-95"
+              className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm shadow-primary/20 transition-all hover:scale-105 hover:bg-[#B86C5F] active:scale-95"
             >
               Iscriviti Ora
             </a>
           </div>
 
           <button
-            className="z-[60] p-2 text-foreground lg:hidden"
+            className="z-[60] rounded-full border border-border bg-card/80 p-2 text-foreground shadow-sm lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -87,13 +87,13 @@ export function Navigation({
       </div>
 
       <div
-        className={`fixed inset-0 z-[50] bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[50] bg-[#2B2B2B]/30 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           mobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setMobileMenuOpen(false)}
       />
       <div
-        className={`fixed top-0 right-0 bottom-0 z-[55] w-[300px] border-l border-primary/20 bg-[var(--template-nav-bg)] transition-transform duration-300 ease-out lg:hidden ${
+        className={`fixed top-0 right-0 bottom-0 z-[55] w-[300px] border-l border-[var(--template-accent-subtle)] bg-card transition-transform duration-300 ease-out shadow-2xl shadow-primary/10 lg:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         onTouchStart={(event) => {
@@ -117,7 +117,7 @@ export function Navigation({
                   <a
                     key={link.href}
                     href={link.href}
-                    className="py-4 text-xl font-medium text-foreground transition-colors hover:text-primary"
+                    className="py-4 text-xl font-medium text-muted-foreground transition-colors hover:text-foreground"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -127,7 +127,7 @@ export function Navigation({
             ))}
             <a
               href="#contatti"
-              className="mt-6 rounded-sm bg-primary px-6 py-4 text-center text-lg font-bold text-primary-foreground transition-transform active:scale-95"
+              className="mt-6 rounded-full bg-primary px-6 py-4 text-center text-lg font-bold text-primary-foreground shadow-sm shadow-primary/20 transition-transform active:scale-95"
               onClick={() => setMobileMenuOpen(false)}
             >
               Iscriviti Ora

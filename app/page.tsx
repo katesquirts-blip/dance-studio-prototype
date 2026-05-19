@@ -3,14 +3,12 @@
 import { useEffect, useRef, useState } from "react"
 
 import { AboutSection } from "@/components/sections/about"
-import { ClassesSection, ParentChildSection } from "@/components/sections/classes"
+import { ClassesSection } from "@/components/sections/classes"
 import { ContactSection } from "@/components/sections/contact"
 import { CtaBanner } from "@/components/sections/cta"
 import { GallerySection } from "@/components/sections/gallery"
 import { HeroSection, StatsStrip } from "@/components/sections/hero"
 import { PricingSection, ScheduleSection } from "@/components/sections/schedule-pricing"
-import { TestimonialsSection } from "@/components/sections/testimonials"
-import { TeamSection, TrainingSection } from "@/components/sections/training-team"
 import { FloatingActions } from "@/components/site/floating-actions"
 import { Footer } from "@/components/site/footer"
 import { Navigation } from "@/components/site/navigation"
@@ -38,7 +36,6 @@ export default function DanceStudioTemplate() {
   const [cookieVisible, setCookieVisible] = useState(false)
   const [cookieFading, setCookieFading] = useState(false)
   const [whatsappHover, setWhatsappHover] = useState(false)
-  const [expandedBios, setExpandedBios] = useState<boolean[]>([false, false, false, false])
   const [visibleCount, setVisibleCount] = useState(20)
   const [reelsExpanded, setReelsExpanded] = useState(false)
   const [coursesExpanded, setCoursesExpanded] = useState(false)
@@ -145,15 +142,7 @@ export default function DanceStudioTemplate() {
         coursesExpanded={coursesExpanded}
         setCoursesExpanded={setCoursesExpanded}
       />
-      <ParentChildSection isVisible={visibleSections.has("mamma-e-figlia")} setSectionRef={setSectionRef} />
       <CtaBanner text="La prima lezione &egrave; gratuita &mdash; vieni a trovarci" buttonLabel="Prenota Ora" />
-      <TrainingSection isVisible={visibleSections.has("formazione")} setSectionRef={setSectionRef} />
-      <TeamSection
-        isVisible={visibleSections.has("team")}
-        setSectionRef={setSectionRef}
-        expandedBios={expandedBios}
-        setExpandedBios={setExpandedBios}
-      />
       <ScheduleSection isVisible={visibleSections.has("orari")} setSectionRef={setSectionRef} />
       <PricingSection isVisible={visibleSections.has("prezzi")} setSectionRef={setSectionRef} />
       <GallerySection
@@ -170,16 +159,6 @@ export default function DanceStudioTemplate() {
         videoRefs={videoRefs}
         playingVideos={playingVideos}
         setPlayingVideos={setPlayingVideos}
-      />
-      <TestimonialsSection
-        isVisible={visibleSections.has("testimonials")}
-        setSectionRef={setSectionRef}
-        setEnlargedPhoto={setEnlargedPhoto}
-      />
-      <CtaBanner
-        text='Scuola certificata <span class="text-primary font-semibold">Opes Danza</span> &mdash; un team di professionisti al tuo fianco'
-        eyebrow="Insegnanti con formazione internazionale e anni di palcoscenico"
-        buttonLabel="Iscriviti Ora"
       />
       <ContactSection
         isVisible={visibleSections.has("contatti")}

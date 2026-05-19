@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.ateneodanzamusicalefitness.it/sitemap.xml',
+    sitemap: 'https://www.lovelydance.it/sitemap.xml',
   }
 }

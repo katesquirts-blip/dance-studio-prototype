@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from 'next'
-import { Jost, Bodoni_Moda, Dancing_Script } from 'next/font/google'
+import { DM_Sans, Dancing_Script, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const jost = Jost({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-dm-sans',
   display: 'swap',
 })
 
-const bodoni = Bodoni_Moda({
+const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
@@ -24,23 +24,23 @@ const dancingScript = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.ateneodanzamusicalefitness.it'),
-  title: "L'Ateneo di Rita Polidoro | Scuola di Danza ad Agropoli",
-  description: "Benvenuti ne L'Ateneo di Rita Polidoro ad Agropoli. Oltre 30 anni di esperienza nell'insegnamento della danza classica, moderna, hip hop e contemporanea. Corsi per bambini e adulti dai 3 anni in su.",
-  keywords: 'danza Agropoli, scuola danza Cilento, Rita Polidoro, corsi danza bambini, danza classica Agropoli, hip hop Agropoli, musical theatre Cilento, pilates Agropoli, fitness Agropoli, L\'Ateneo danza',
-  authors: [{ name: 'Rita Polidoro' }],
-  creator: 'Rita Polidoro',
-  publisher: "L'Ateneo Danza Musical e Fitness",
+  metadataBase: new URL('https://www.lovelydance.it'),
+  title: 'Lovely Dance Beauty & Fitness | Vomero',
+  description: 'Corsi di danza, fitness e benessere nel cuore del Vomero. Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
+  keywords: 'Lovely Dance Vomero, danza Vomero, fitness Vomero, yoga Vomero, pilates Vomero, salsa Napoli, bachata Napoli, benessere Napoli',
+  authors: [{ name: 'Lovely Dance' }],
+  creator: 'Lovely Dance',
+  publisher: 'Lovely Dance Beauty & Fitness',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "L'Ateneo di Rita Polidoro | Il Tuo Palcoscenico Inizia Qui",
-    description: "Scopri l'eccellenza della danza ad Agropoli con Rita Polidoro. Oltre 30 anni di passione e professionalità. Iscriviti per una lezione gratuita.",
-    url: 'https://www.ateneodanzamusicalefitness.it',
-    siteName: "L'Ateneo Danza",
+    title: 'Lovely Dance Beauty & Fitness | Vomero',
+    description: 'Danza, fitness e benessere nel cuore del Vomero. Prenota una lezione di prova.',
+    url: 'https://www.lovelydance.it',
+    siteName: 'Lovely Dance',
     locale: 'it_IT',
     type: 'website',
     images: [
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
         url: '/OGimage.jpg',
         width: 1200,
         height: 630,
-        alt: "L'Ateneo di Rita Polidoro - Scuola di Danza Agropoli",
+        alt: 'Lovely Dance Beauty & Fitness',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "L'Ateneo di Rita Polidoro | Danza ad Agropoli",
-    description: "Corsi di danza per bambini e adulti. Il tuo percorso nel mondo della danza inizia qui.",
+    title: 'Lovely Dance Beauty & Fitness | Vomero',
+    description: 'Corsi di danza, fitness e benessere nel cuore del Vomero.',
     images: ['/OGimage.jpg'],
   },
   robots: {
@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="it" className={`${jost.variable} ${bodoni.variable} ${dancingScript.variable}`}>
+    <html lang="it" className={`${dmSans.variable} ${playfair.variable} ${dancingScript.variable}`}>
       <body className="font-sans antialiased" suppressHydrationWarning={true}>
         {children}
         <Analytics />

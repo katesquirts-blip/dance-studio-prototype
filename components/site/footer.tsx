@@ -10,20 +10,15 @@ export function Footer({ navLinks }: { navLinks: NavLink[] }) {
         <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-center md:items-start">
             <a href="#" className="mb-6 flex items-center gap-3">
-              <img
-                src={brand.logo}
-                alt={`${brand.shortName} logo`}
-                className="h-20 w-auto object-contain"
-                style={{ filter: "brightness(0) invert(1)" }}
-              />
+              <span className="font-serif text-3xl font-semibold tracking-wide text-foreground">{brand.shortName}</span>
             </a>
             <p className="mt-4 max-w-[280px] text-center text-sm leading-relaxed text-muted-foreground md:text-left">{brand.tagline}</p>
             <div className="mt-6 flex gap-5">
-              <a href={brand.instagramHref} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="flex flex-col items-center gap-1 text-muted-foreground transition-colors duration-200 hover:text-primary">
+              <a href={brand.instagramHref} aria-label="Instagram" className="flex flex-col items-center gap-1 text-muted-foreground transition-colors duration-200 hover:text-primary">
                 <Instagram size={24} />
                 <span className="font-sans text-xs text-muted-foreground">Instagram</span>
               </a>
-              <a href={brand.facebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="flex flex-col items-center gap-1 text-muted-foreground transition-colors duration-200 hover:text-primary">
+              <a href={brand.facebookHref} aria-label="Facebook" className="flex flex-col items-center gap-1 text-muted-foreground transition-colors duration-200 hover:text-primary">
                 <Facebook size={24} />
                 <span className="font-sans text-xs text-muted-foreground">Facebook</span>
               </a>
@@ -55,9 +50,7 @@ export function Footer({ navLinks }: { navLinks: NavLink[] }) {
 
           <FooterColumn title="Dove Siamo">
             <p className="mb-3 text-center text-sm leading-relaxed text-muted-foreground md:text-left">
-              Sede Storica: {brand.primaryLocation}
-              <br />
-              Nuova Sala: {brand.secondaryLocation}
+              {brand.primaryLocation}, {brand.secondaryLocation}
               <br />
               {brand.cityLine}
             </p>

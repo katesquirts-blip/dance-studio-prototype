@@ -3,14 +3,9 @@ import {
   Calendar,
   CalendarRange,
   Crown,
-  Drama,
   Flame,
-  GraduationCap,
   Heart,
-  Mic,
-  Mic2,
   Music,
-  Radio,
   Sparkles,
   Star,
   Tag,
@@ -55,30 +50,28 @@ export type TeamMember = {
 }
 
 export const brand = {
-  name: "L'Ateneo Danza Musical e Fitness",
-  shortName: "L'Ateneo Danza",
-  tagline: "Da oltre 30 anni, la casa della danza ad Agropoli.",
-  logo: "/logo2.png",
-  phone: "+39 339 356 5655",
-  phoneHref: "tel:+393393565655",
-  whatsappHref: "https://wa.me/393393565655",
-  email: "ritapolidoro4@gmail.com",
-  emailHref: "mailto:ritapolidoro4@gmail.com",
-  instagramHref: "https://www.instagram.com/ateneodanza/",
-  facebookHref: "https://www.facebook.com/ateneo6",
-  mapsHref: "https://maps.google.com/?q=Via+Moio+8+Agropoli+SA",
-  primaryLocation: "Via Moio, 8",
-  secondaryLocation: "Via Moio, 16",
-  cityLine: "84043 Agropoli (SA)",
-  hours: "Lun-Ven 10:00-12:00  14:30-21:00, Sabato 9:00-12:00.",
-  copyright: "© 2026 L'Ateneo Danza Musical e Fitness · Agropoli, Cilento",
+  name: "Lovely Dance Beauty & Fitness",
+  shortName: "Lovely Dance",
+  tagline: "Danza, fitness e benessere nel cuore del Vomero.",
+  logo: "",
+  phone: "+39 000 000 0000",
+  phoneHref: "tel:+390000000000",
+  whatsappHref: "https://wa.me/393498737169",
+  email: "info@lovelydance.it",
+  emailHref: "mailto:info@lovelydance.it",
+  instagramHref: "#",
+  facebookHref: "#",
+  mapsHref: "https://maps.google.com/?q=Vomero+Napoli",
+  primaryLocation: "Vomero",
+  secondaryLocation: "Napoli",
+  cityLine: "Napoli (NA)",
+  hours: "Orari in aggiornamento.",
+  copyright: "© 2026 Lovely Dance Beauty & Fitness",
 }
 
 export const navLinks: NavLink[] = [
   { href: "#chi-siamo", label: "Chi Siamo" },
   { href: "#corsi", label: "Corsi" },
-  { href: "#mamma-e-figlia", label: "Mamma & Figlia" },
-  { href: "#formazione", label: "Formazione" },
   { href: "#orari", label: "Orari" },
   { href: "#prezzi", label: "Prezzi" },
   { href: "#gallery", label: "Gallery" },
@@ -86,116 +79,179 @@ export const navLinks: NavLink[] = [
 ]
 
 export const stats = [
-  { number: "30+", label: "ANNI DI ESPERIENZA" },
-  { number: "200+", label: "ALLIEVI OGNI ANNO" },
-  { number: "3", label: "ETÀ MINIMA (ANNI)" },
-  { number: "2", label: "SPETTACOLI ANNUALI" },
+  { number: "10+", label: "DISCIPLINE" },
+  { number: "Kids", label: "BAMBINI E ADULTI" },
+  { number: "3", label: "DANZA, FITNESS E BENESSERE" },
+  { number: "Vomero", label: "NAPOLI" },
 ]
 
 export const courseCategories: CourseCategory[] = [
   {
-    label: "DANZA",
+    label: "Dance",
     courses: [
       {
         title: "Danza Classica",
-        age: "3-6 anni",
-        description: "Le basi della tecnica classica per i più piccoli, in un ambiente giocoso e stimolante.",
+        age: "Tutti i livelli",
+        description: "Tecnica, postura e musicalita per un percorso elegante e progressivo.",
         image: "/488642768_2081867468995252_8593027666977621862_n.jpg",
         Icon: Music,
       },
       {
-        title: "Danza Moderna",
-        age: "7-14 anni",
-        description: "Energia, ritmo e creatività per giovani ballerini che vogliono esprimersi liberamente.",
+        title: "Social Dance",
+        age: "Adulti",
+        description: "Balli sociali per divertirti, muoverti con sicurezza e vivere la musica in compagnia.",
+        image: "/male_female_duo.jpg",
+        Icon: Star,
+      },
+      {
+        title: "Hip Hop Kids",
+        age: "Kids",
+        description: "Energia, ritmo e coordinazione per bambini che vogliono muoversi con stile.",
+        image: "/student_male.jpg",
+        Icon: Zap,
+      },
+      {
+        title: "Salsa Nightclub Style",
+        age: "Adulti",
+        description: "Salsa dinamica e scenica con un taglio moderno, sociale e da pista.",
         image: "/female_pair_modern_dance.jpg",
         Icon: Zap,
       },
       {
-        title: "Danza Contemporanea",
-        age: "15-30 anni",
-        description: "Esplorazione del movimento, improvvisazione e tecnica avanzata per ballerini esperti.",
+        title: "Burlesque",
+        age: "Adulti",
+        description: "Espressivita, femminilita e presenza scenica in una lezione elegante e ironica.",
+        image: "/student_green_dress.jpg",
+        Icon: Sparkles,
+      },
+      {
+        title: "Caraibico",
+        age: "Tutti i livelli",
+        description: "Ritmi caraibici per lavorare su energia, musicalita e movimento del corpo.",
+        image: "/male_female_duo.jpg",
+        Icon: Flame,
+      },
+      {
+        title: "Danze Popolari",
+        age: "Tutti i livelli",
+        description: "Tradizione, ritmo e socialita attraverso danze coinvolgenti e accessibili.",
+        image: "/group_outside_.jpg",
+        Icon: Users,
+      },
+      {
+        title: "Kizomba",
+        age: "Adulti",
+        description: "Connessione, fluidita e movimento morbido per scoprire uno stile sensuale e musicale.",
+        image: "/theatre_dance_pair.jpg",
+        Icon: Heart,
+      },
+      {
+        title: "Bachata Fusion",
+        age: "Adulti",
+        description: "Bachata con contaminazioni moderne per migliorare musicalita, tecnica e interpretazione.",
+        image: "/male_female_duo.jpg",
+        Icon: Music,
+      },
+      {
+        title: "Salsa Cubana",
+        age: "Tutti i livelli",
+        description: "Ritmo, energia e socialita nello stile cubano, dalle basi alle combinazioni piu dinamiche.",
         image: "/danza_comp.jpg",
         Icon: Wind,
       },
+    ],
+  },
+  {
+    label: "Fitness & Wellness",
+    courses: [
       {
-        title: "Hip Hop",
+        title: "Yoga",
         age: "Tutti i livelli",
-        description: "Stile urbano, groove e freestyle per chi ama il ritmo e l'energia della street dance.",
-        image: "/student_male.jpg",
-        Icon: Radio,
+        description: "Pratica morbida per respirare meglio, sciogliere tensioni e recuperare calma mentale.",
+        image: "/inside_school_children_lesson.jpg",
+        Icon: Wind,
       },
       {
-        title: "Jazz",
+        title: "Postural Pilates",
         age: "Tutti i livelli",
-        description: "Tecnica, musicalità e interpretazione per un approccio versatile alla danza.",
-        image: "/student_blue_dress.jpg",
-        Icon: Mic,
+        description: "Controllo, postura e consapevolezza per rinforzare il corpo in modo equilibrato.",
+        image: "/fitness.jpg",
+        Icon: Heart,
       },
       {
-        title: "Discipline Aeree",
-        age: "Dagli 8 anni",
-        description: "Cerchio, tessuto, amaca e attrezzi misti - sperimenta la libertà del movimento in volo.",
-        image: "/air_dance.jpg",
+        title: "Ginnastica Posturale",
+        age: "Adulti",
+        description: "Esercizi mirati per migliorare postura, mobilita e benessere quotidiano.",
+        image: "/fitness.jpg",
+        Icon: Activity,
+      },
+      {
+        title: "Ginnastica Dolce",
+        age: "Adulti",
+        description: "Movimento leggero e progressivo per mantenersi attivi con cura e continuita.",
+        image: "/fitness.jpg",
+        Icon: Heart,
+      },
+      {
+        title: "Aerobica",
+        age: "Adulti",
+        description: "Allenamento cardio a ritmo di musica per energia, resistenza e tono.",
+        image: "/Zmba_training.jpg",
+        Icon: Flame,
+      },
+      {
+        title: "Biodanza",
+        age: "Adulti",
+        description: "Movimento, emozione e musica per un'esperienza di benessere e connessione.",
+        image: "/air_dance_student.jpg",
+        Icon: Sparkles,
+      },
+      {
+        title: "Meditazione Zen",
+        age: "Tutti i livelli",
+        description: "Pratiche di presenza e respirazione per ritrovare calma, equilibrio e centratura.",
+        image: "/inside_school_children_lesson.jpg",
         Icon: Star,
       },
     ],
   },
   {
-    label: "MUSICAL & RECITAZIONE",
+    label: "Beauty / Lifestyle",
     courses: [
       {
-        title: "Corsi di Canto",
-        age: "Tutti i livelli",
-        description: "Tecnica vocale e interpretazione per aspiranti cantanti e performer.",
-        image: "/theatre_dance_pair.jpg",
-        Icon: Mic2,
-      },
-      {
-        title: "Corsi di Recitazione",
-        age: "Tutti i livelli",
-        description: "Espressività, dizione e presenza scenica per il palcoscenico e oltre.",
-        image: "/kids_dance_stage.jpg",
-        Icon: Drama,
-      },
-      {
-        title: "Danza per Musical",
-        age: "Tutti i livelli",
-        description: "Canto, recitazione e danza combinati per creare performer completi.",
-        image: "/dance_theatre.jpg",
+        title: "Make-Up Fashion",
+        age: "Su prenotazione",
+        description: "Sessioni dedicate al make-up e allo stile per valorizzare immagine e personalita.",
+        image: "/student_blue_dress.jpg",
         Icon: Sparkles,
       },
-    ],
-  },
-  {
-    label: "FITNESS",
-    courses: [
       {
-        title: "Aerobica & Step",
-        age: "Adulti",
-        description: "Allenamento cardiovascolare dinamico a ritmo di musica.",
-        image: "/49515778_549482118900469_8702854088280244224_n.jpg",
+        title: "Nutritional Consultation",
+        age: "Nutrizionista in sede",
+        description: "Consulenze nutrizionali in sede per accompagnare benessere, energia e obiettivi personali.",
+        image: "/fitness.jpg",
+        Icon: Heart,
+      },
+      {
+        title: "Personal Trainer Sessions",
+        age: "Su prenotazione",
+        description: "Percorsi individuali con personal trainer per allenarti in modo mirato e personalizzato.",
+        image: "/Zmba_training.jpg",
         Icon: Activity,
       },
       {
-        title: "Zumba",
-        age: "Adulti",
-        description: "Fitness e divertimento con coreografie ispirate ai ritmi latini.",
-        image: "/Zmba_training.jpg",
-        Icon: Flame,
-      },
-      {
-        title: "Pilates",
-        age: "Adulti",
-        description: "Benessere fisico e mentale attraverso esercizi mirati e controllati.",
-        image: "/fitness.jpg",
-        Icon: Heart,
+        title: "Private Dance & Fitness Lessons",
+        age: "Su prenotazione",
+        description: "Lezioni private di danza e fitness per lavorare sui tuoi obiettivi con attenzione dedicata.",
+        image: "/female_pair_modern_dance.jpg",
+        Icon: Star,
       },
     ],
   },
 ]
 
 export const featuredGalleryPhotos = [
-  { src: "/additional/coppia-balletto-ateneo-agropoli-3.webp", alt: "Coppia balletto Ateneo Agropoli" },
+  { src: "/additional/coppia-balletto-ateneo-agropoli-3.webp", alt: "Coppia in scena" },
   { src: "/additional/females-group-perform.webp", alt: "Gruppo femminile in scena" },
   { src: "/additional/coppia-performance-palcoscenico-2.webp", alt: "Coppia performance palcoscenico" },
   { src: "/female_pair_modern_dance.jpg", alt: "Coppia femminile danza moderna" },
@@ -250,8 +306,6 @@ export const allGalleryPhotos = [
 
 export const reels = ["/reel1.mp4", "/reel2.mp4", "/reel3.mp4"]
 
-export const testimonialImages = ["/testimonial1.jpeg", "/testimonial2.jpeg", "/testimonial3.15.jpeg"]
-
 export const salaArmoniaSchedule: ScheduleDay[] = [
   { day: "LUNEDÌ", classes: [{ time: "10:00", name: "Benessere Mamme | Pilates | Aerobica" }, { time: "17:00", name: "Predanza" }, { time: "18:15", name: "Aerobica" }, { time: "19:15", name: "Moderno Avanzato" }] },
   { day: "MARTEDÌ", classes: [{ time: "10:00", name: "Danza Per Adulti" }, { time: "16:00", name: "Moderno Principianti II" }, { time: "17:00", name: "Classico Principianti II" }, { time: "18:00", name: "Moderno Intermedio" }, { time: "19:00", name: "Danza Aerea" }] },
@@ -268,33 +322,6 @@ export const salaRitmoSchedule: ScheduleDay[] = [
   { day: "VENERDÌ", classes: [{ time: "15:00", name: "Aerobica e GAG" }, { time: "16:30", name: "Fiabe in Movimento" }, { time: "18:15", name: "Aerobica | Step | GAG" }, { time: "19:15", name: "Modern Avanzato" }] },
 ]
 
-export const teamMembers: TeamMember[] = [
-  {
-    photo: "/amedeomonzo.jpeg",
-    name: "Amedeo Monzo",
-    role: "Insegnante di Danza",
-    bio: "Amedeo Monzo è un danzatore professionista con un curriculum di altissimo livello. Ha calcato i palcoscenici più prestigiosi d'Italia ed Europa, collaborando con artisti come Gigi D'Alessio e Claudio Baglioni, e partecipando all'XFactor Italy Final. Ha danzato per brand iconici come Dolce & Gabbana, Fendi e Moncler, e nel 2025 ha recitato nel film \"The Saints\", prodotto da Martin Scorsese. Porta all'Ateneo un'energia unica e un'esperienza internazionale rara.",
-  },
-  {
-    photo: "/carolinaMonzo.jpg",
-    name: "Carolina Monzo",
-    role: "Insegnante di Danza e Recitazione",
-    bio: "Carolina Monzo è originaria di Agropoli - ha mosso i suoi primi passi di danza proprio qui all'Ateneo all'età di tre anni. La sua formazione l'ha portata alle più prestigiose istituzioni italiane: la Scuola di Danza del Teatro dell'Opera di Roma e l'Accademia Nazionale di Danza. Ha calcato palcoscenici internazionali con lo spettacolo \"Marenostrum\" tra Barcellona, Tunisi e Salerno, e ha partecipato a produzioni RAI e videoclip di artisti come Tropico e Rossella Brescia. Insegna anche Heels - una delle discipline più richieste del momento.",
-  },
-  {
-    photo: "/federicabarretta.jpeg",
-    name: "Federica Barretta",
-    role: "Insegnante di Danza Classica e Contemporanea",
-    bio: "Federica Barretta è diplomata al Liceo Coreutico di Salerno con indirizzo Contemporaneo e diplomata Accademia Abracadanza con Stefania Ciancio. Tecnico certificato in Danza Moderna, ha affinato la sua formazione con maestri di rilievo come Francesco Ventriglia, Luca Calzolaro e Fabrizio Esposito. Dal 2021 insegna danza classica e contemporanea all'Ateneo di Rita Polidoro, portando in sala un approccio empatico e attento alle esigenze di ogni allievo.",
-  },
-  {
-    photo: "/GiorgioSannino.jpg",
-    name: "Giorgio Sannino",
-    role: "Insegnante di Danza Classica e Contemporanea",
-    bio: "Giorgio Sannino è un danzatore classico e contemporaneo formatosi presso istituzioni di primo piano a Napoli, tra cui il Teatro San Carlo e la Crown Ballet School diretta da Luigi Ferrone. Specializzato in danza classica, contemporanea e modern, ha approfondito la sua tecnica con maestri internazionali come Vladimir Derevianko e Mauro Astolfi. Ha fatto parte della compagnia Kataklo' di danza contemporanea e ha partecipato alla produzione di Giselle con il Nuovo Balletto Italiano. Porta all'Ateneo una solida preparazione accademica e una profonda conoscenza delle tecniche classiche e contemporanee.",
-  },
-]
-
 export const pricingCards = [
   { Icon: Ticket, title: "Lezione Singola", description: "Ideale per provare un corso prima di iscriverti. Nessun impegno, massima flessibilità." },
   { Icon: Calendar, title: "Abbonamento Mensile", description: "La soluzione più flessibile per chi vuole ballare con regolarità ogni mese." },
@@ -305,21 +332,4 @@ export const pricingCards = [
 export const pricingHighlights = [
   { Icon: Tag, title: "Tariffe Differenziate", description: "I costi variano in base al corso scelto e all'età dell'allievo. Contattaci per ricevere il preventivo personalizzato." },
   { Icon: Users, title: "Sconti Famiglia", description: "Sono previste riduzioni speciali per fratelli e/o sorelle e per mamme e figlie che si iscrivono insieme." },
-]
-
-export const professionalTracks = [
-  {
-    Icon: GraduationCap,
-    title: "Per Futuri Danzatori",
-    items: ["Corso di Danza Professionale", "Corso di Coreografia", "Corso di Tecnica di Danza"],
-  },
-  {
-    Icon: GraduationCap,
-    title: "Per Futuri Docenti",
-    items: [
-      "Corso di Metodologia dell'Insegnamento della Danza",
-      "Corso di Didattica della Danza",
-      "Corso di Preparazione all'Esame di Stato per l'Insegnamento della Danza",
-    ],
-  },
 ]

@@ -1,9 +1,9 @@
 "use client"
 
-import { ChevronDown, Mail, MapPin, Phone } from "lucide-react"
+import { ChevronDown, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import { type Dispatch, type ReactNode, type SetStateAction } from "react"
 
-import { brand } from "@/lib/site-config"
+import { brand, courseCategories } from "@/lib/site-config"
 
 type ContactSectionProps = {
   isVisible: boolean
@@ -37,10 +37,10 @@ export function ContactSection({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 px-4 text-left lg:px-0 lg:text-center">
           <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl md:text-6xl lg:text-center">
-            Pronti a <span className="text-primary">Ballare</span>?
+            Vuoi provare un <span className="text-primary">corso</span>?
           </h2>
           <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">
-            Iscriviti oggi o vieni a trovarci per una lezione gratuita di prova
+            Scrivici e ti aiutiamo a scegliere il percorso piu adatto a te. Ti rispondiamo con orari, disponibilita e prossimi passi per iniziare.
           </p>
         </div>
 
@@ -110,19 +110,13 @@ export function ContactSection({
                       defaultValue=""
                     >
                       <option value="" disabled>Seleziona un corso</option>
-                      <option value="classica">Danza Classica</option>
-                      <option value="moderna">Danza Moderna</option>
-                      <option value="contemporanea">Danza Contemporanea</option>
-                      <option value="hiphop">Hip Hop</option>
-                      <option value="jazz">Jazz</option>
-                      <option value="aeree">Discipline Aeree</option>
-                      <option value="canto">Corsi di Canto</option>
-                      <option value="recitazione">Corsi di Recitazione</option>
-                      <option value="musical">Danza per Musical</option>
-                      <option value="aerobica">Aerobica & Step</option>
-                      <option value="zumba">Zumba</option>
-                      <option value="pilates">Pilates</option>
-                      <option value="formazione">Formazione Professionale</option>
+                      {courseCategories.flatMap((category) =>
+                        category.courses.map((course) => (
+                          <option key={`${category.label}-${course.title}`} value={course.title}>
+                            {course.title}
+                          </option>
+                        )),
+                      )}
                       <option value="altro">Altro</option>
                     </select>
                     <ChevronDown size={16} className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-muted-foreground" />
@@ -144,6 +138,15 @@ export function ContactSection({
               <button type="submit" className="w-full rounded-sm bg-primary py-4 text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
                 Invia Messaggio
               </button>
+              <a
+                href={brand.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-sm border border-primary/30 bg-card py-4 text-lg font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                <MessageCircle size={20} />
+                Scrivici su WhatsApp
+              </a>
               {formNetworkError && <p className="mt-3 font-sans text-sm text-[var(--template-error)]">Si è verificato un errore. Riprova o scrivici direttamente.</p>}
             </form>
           )}
@@ -168,6 +171,7 @@ export function ContactSection({
                 </div>
                 <ContactLink href={brand.phoneHref} icon={<Phone className="mt-1 h-6 w-6 flex-shrink-0 text-primary transition-transform group-hover:scale-110" />} label="Telefono" value={brand.phone} />
                 <ContactLink href={brand.emailHref} icon={<Mail className="mt-1 h-6 w-6 flex-shrink-0 text-primary transition-transform group-hover:scale-110" />} label="Email" value={brand.email} />
+                <ContactLink href={brand.whatsappHref} icon={<MessageCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary transition-transform group-hover:scale-110" />} label="WhatsApp" value="Risposta rapida per prove e informazioni" />
               </div>
             </div>
           </div>
@@ -176,7 +180,7 @@ export function ContactSection({
           <h3 className="mb-6 font-serif text-2xl font-bold text-foreground">Dove Siamo</h3>
           <div className="aspect-video w-full overflow-hidden rounded-sm border border-border md:aspect-[21/9]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190.0541894250962!2d14.993754947979332!3d40.345295625828975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bfe5172eef7a9%3A0x39892003b04f0f75!2sVia%20Moio%2C%208%2C%2084043%20Agropoli%20SA!5e0!3m2!1sen!2sit!4v1775039640492!5m2!1sen!2sit"
+              src="https://www.google.com/maps?q=Vomero%20Napoli&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -37,7 +37,7 @@ export function FloatingActions({
 
       <div
         style={{ position: "fixed", zIndex: 9000 }}
-        className="right-4 bottom-20 flex items-center gap-2 md:right-6 md:bottom-6"
+        className={`right-4 flex items-center gap-2 md:right-6 ${cookieVisible ? "bottom-44 md:bottom-24" : "bottom-20 md:bottom-6"}`}
         onMouseEnter={() => setWhatsappHover(true)}
         onMouseLeave={() => setWhatsappHover(false)}
       >
@@ -50,6 +50,7 @@ export function FloatingActions({
           href={brand.whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Scrivici su WhatsApp"
           className="flex h-14 w-14 items-center justify-center rounded-full"
           style={{
             background: "var(--template-whatsapp)",

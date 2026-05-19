@@ -91,7 +91,7 @@ export function GallerySection({
             <div className="mb-12 px-4 text-left lg:px-0 lg:text-center">
               <h2 className="mb-4 text-left font-serif text-4xl font-bold text-foreground sm:text-5xl lg:text-center">I Nostri Video</h2>
               <p className="max-w-none text-lg text-pretty text-foreground lg:mx-auto lg:max-w-2xl">
-                L&apos;Ateneo in scena - momenti di passione e talento
+                Lovely Dance in movimento - momenti di energia e femminilità
               </p>
             </div>
             <div className={reelsExpanded ? "flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0" : "flex justify-center"}>

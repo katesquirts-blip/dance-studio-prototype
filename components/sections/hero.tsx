@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ChevronRight } from "lucide-react"
+import { ChevronRight, MessageCircle } from "lucide-react"
 
 import { stats } from "@/lib/site-config"
 
@@ -8,7 +8,10 @@ export function HeroSection() {
     <section className="relative flex min-h-screen items-center overflow-hidden">
       <div
         className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at 70% 50%, var(--template-hero-glow) 0%, var(--background) 65%)" }}
+        style={{
+          background:
+            "radial-gradient(ellipse at 78% 42%, rgba(201, 124, 109, 0.2) 0%, rgba(239, 231, 221, 0.86) 36%, var(--background) 72%)",
+        }}
       />
 
       <div className="absolute inset-0 z-0 block h-full w-full lg:right-0 lg:left-auto lg:w-1/2">
@@ -23,41 +26,48 @@ export function HeroSection() {
           className="absolute inset-0 lg:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(15,14,10,0.75) 0%, rgba(15,14,10,0.85) 60%, var(--background) 100%)",
+              "linear-gradient(to bottom, rgba(247,243,238,0.82) 0%, rgba(247,243,238,0.9) 58%, var(--background) 100%)",
           }}
         />
         <div
           className="absolute inset-0 hidden lg:block"
-          style={{ background: "linear-gradient(to right, var(--background) 0%, transparent 35%)" }}
+          style={{ background: "linear-gradient(to right, var(--background) 0%, rgba(247,243,238,0.88) 36%, transparent 72%)" }}
         />
         <div
           className="absolute inset-0 hidden lg:block"
-          style={{ background: "linear-gradient(to top, var(--background) 0%, transparent 30%)" }}
+          style={{ background: "linear-gradient(to top, var(--background) 0%, transparent 34%)" }}
         />
       </div>
 
-      <div className="relative z-10 ml-0 max-w-7xl px-4 py-32 text-left sm:px-6 lg:mx-auto lg:w-1/2 lg:px-8 lg:py-0">
-        <h1 className="animate-fade-in-up mb-6 text-left font-serif text-5xl font-bold text-balance text-foreground italic sm:text-6xl md:text-7xl lg:text-8xl">
-          Nasce Tutto
+      <div className="relative z-10 ml-0 max-w-7xl px-4 pt-32 pb-24 text-left sm:px-6 sm:pt-36 sm:pb-28 lg:mx-auto lg:w-1/2 lg:px-8 lg:py-0">
+        <h1 className="animate-fade-in-up mb-6 text-left font-serif text-5xl leading-[0.96] font-bold text-balance text-foreground italic sm:text-6xl md:text-7xl lg:text-8xl">
+          La danza,
           <br />
-          <span className="text-primary">da un Passo</span>
+          <span className="text-primary">la bellezza,</span>
+          <br />
+          il tuo momento
         </h1>
-        <p className="animate-fade-in-up animate-delay-200 mb-10 max-w-none text-lg leading-relaxed font-light text-pretty text-foreground sm:text-xl lg:max-w-xl lg:text-2xl">
-          La passione per la danza si coltiva. La tua storia sul palcoscenico inizia qui.
+        <p className="animate-fade-in-up animate-delay-200 mb-10 max-w-none text-lg leading-relaxed font-light text-pretty text-muted-foreground sm:text-xl lg:max-w-xl lg:text-2xl">
+          Corsi di danza, fitness e benessere nel cuore del Vomero. Uno spazio accogliente dove movimento, energia e femminilità si incontrano.
         </p>
         <div className="animate-fade-in-up animate-delay-300 flex flex-col justify-start gap-4 sm:flex-row">
           <a
             href="#corsi"
-            className="inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-primary-foreground shadow-sm shadow-primary/20 transition-colors hover:bg-[#B86C5F]"
           >
-            Scopri i Corsi
+            Scopri i corsi
             <ChevronRight size={20} />
           </a>
           <a
-            href="#contatti"
-            className="rounded-sm border border-foreground/30 px-8 py-4 text-lg font-semibold text-foreground transition-colors hover:border-foreground"
+            href="https://wa.me/393498737169"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-primary/30 bg-card/70 px-8 py-4 text-lg font-semibold text-foreground shadow-sm transition-colors hover:border-primary hover:bg-card"
           >
-            Contattaci
+            <span className="inline-flex items-center justify-center gap-2">
+              <MessageCircle size={20} />
+              Scrivici su WhatsApp
+            </span>
           </a>
         </div>
       </div>
@@ -73,13 +83,13 @@ export function HeroSection() {
 
 export function StatsStrip() {
   return (
-    <section className="border-t border-b border-border bg-card py-8 sm:py-12">
+    <section className="border-y border-primary/15 bg-secondary/60 py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-6 text-center sm:gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 text-center sm:gap-4 md:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.label}>
-              <div className="mb-1 font-serif text-4xl font-bold text-primary sm:text-5xl">{stat.number}</div>
-              <div className="text-sm tracking-wider text-muted-foreground uppercase sm:text-base">{stat.label}</div>
+            <div key={stat.label} className="rounded-full border border-primary/15 bg-card/70 px-4 py-5 shadow-sm shadow-primary/5">
+              <div className="mb-1 font-serif text-3xl font-semibold text-primary sm:text-4xl">{stat.number}</div>
+              <div className="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase sm:text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
