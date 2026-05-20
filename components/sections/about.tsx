@@ -23,18 +23,10 @@ export function AboutSection({ isVisible, setSectionRef, bioOpen, setBioOpen }: 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm border border-border bg-secondary">
             <Image
-              src="/fitness.jpg"
+              src="/additional/chi-siamo-lovely-dance.jpg"
               alt="Lezione fitness e benessere"
               fill
               className="object-cover"
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to left, var(--background) 0%, transparent 42%)" }}
-            />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(to top, var(--background) 0%, transparent 36%)" }}
             />
           </div>
 

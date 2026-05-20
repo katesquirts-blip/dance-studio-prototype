@@ -92,7 +92,7 @@ export function ClassesSection({ isVisible, setSectionRef, coursesExpanded, setC
           <div className="mt-12 text-center md:hidden">
             <button
               onClick={() => setCoursesExpanded(true)}
-              className="mx-auto flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-sm shadow-primary/20 transition-all hover:bg-[#B86C5F] active:scale-95"
+              className="mx-auto flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-primary-foreground shadow-sm shadow-primary/25 transition-all hover:bg-[#E24C9F] active:scale-95"
             >
               Vedi tutti i corsi
               <ChevronRight size={18} />

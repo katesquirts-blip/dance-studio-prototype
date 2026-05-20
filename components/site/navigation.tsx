@@ -70,7 +70,7 @@ export function Navigation({
             </div>
             <a
               href="#contatti"
-              className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm shadow-primary/20 transition-all hover:scale-105 hover:bg-[#B86C5F] active:scale-95"
+              className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm shadow-primary/25 transition-all hover:scale-105 hover:bg-[#E24C9F] active:scale-95"
             >
               Iscriviti Ora
             </a>
@@ -109,15 +109,15 @@ export function Navigation({
       >
         <div className="flex h-full flex-col px-8 pt-20 pb-10">
           <div className="mx-auto mb-6 h-1 w-10 rounded-full bg-border" />
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             {mobileNavGroups.map((group, groupIndex) => (
-              <div key={groupIndex}>
-                {groupIndex > 0 && <div className="my-2 border-t border-border" />}
+              <div key={groupIndex} className="flex flex-col gap-2">
+                {groupIndex > 0 && <div className="my-3 border-t border-border" />}
                 {group.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    className="py-4 text-xl font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="block rounded-sm border border-primary/10 bg-secondary px-4 py-4 text-xl font-semibold text-foreground transition-colors hover:border-primary/30 hover:bg-primary/10"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}

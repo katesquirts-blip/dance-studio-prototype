@@ -24,59 +24,54 @@ const dancingScript = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.lovelydance.it'),
-  title: 'Lovely Dance Beauty & Fitness | Vomero',
-  description: 'Corsi di danza, fitness e benessere nel cuore del Vomero. Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
-  keywords: 'Lovely Dance Vomero, danza Vomero, fitness Vomero, yoga Vomero, pilates Vomero, salsa Napoli, bachata Napoli, benessere Napoli',
-  authors: [{ name: 'Lovely Dance' }],
-  creator: 'Lovely Dance',
-  publisher: 'Lovely Dance Beauty & Fitness',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  metadataBase: new URL('https://www.lovelydancevomero.it'),
+
+  title: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
+  description:
+    'Corsi di danza, fitness e benessere nel cuore del Vomero. ' +
+    'Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
+
   openGraph: {
-    title: 'Lovely Dance Beauty & Fitness | Vomero',
-    description: 'Danza, fitness e benessere nel cuore del Vomero. Prenota una lezione di prova.',
-    url: 'https://www.lovelydance.it',
-    siteName: 'Lovely Dance',
-    locale: 'it_IT',
     type: 'website',
+    url: 'https://www.lovelydancevomero.it',
+    siteName: 'Lovely Dance Beauty & Fitness',
+    title: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
+    description:
+      'Corsi di danza, fitness e benessere nel cuore del Vomero. ' +
+      'Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
     images: [
       {
-        url: '/OGimage.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Lovely Dance Beauty & Fitness',
+        alt: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
       },
     ],
+    locale: 'it_IT',
   },
+
   twitter: {
     card: 'summary_large_image',
-    title: 'Lovely Dance Beauty & Fitness | Vomero',
-    description: 'Corsi di danza, fitness e benessere nel cuore del Vomero.',
-    images: ['/OGimage.jpg'],
+    title: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
+    description:
+      'Corsi di danza, fitness e benessere nel cuore del Vomero. ' +
+      'Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
+    images: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
+
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-icon.png',
   },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0A0A0A',
+  themeColor: '#9557C2',
   width: 'device-width',
   initialScale: 1,
 }
