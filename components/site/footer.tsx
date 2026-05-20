@@ -41,9 +41,12 @@ export function Footer({ navLinks }: { navLinks: NavLink[] }) {
             <ul>
               <FooterContact icon={<Phone size={14} />} href={brand.phoneHref} text={brand.phone} />
               <FooterContact icon={<Mail size={14} />} href={brand.emailHref} text={brand.email} />
-              <li className="mb-3 flex items-center gap-2">
-                <Clock size={14} className="shrink-0 text-primary" />
-                <span className="text-sm text-muted-foreground">{brand.hours}</span>
+              <li className="mb-3">
+                <div className="flex items-center gap-2">
+                  <Clock size={14} className="shrink-0 text-primary" />
+                  <span className="text-sm text-muted-foreground">Orari in aggiornamento</span>
+                </div>
+                <span className="mt-2 block whitespace-pre-line text-sm text-muted-foreground">{brand.hours}</span>
               </li>
             </ul>
           </FooterColumn>

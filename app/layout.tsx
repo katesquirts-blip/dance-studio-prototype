@@ -41,7 +41,7 @@ export const metadata: Metadata = {
       'Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/additional/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description:
       'Corsi di danza, fitness e benessere nel cuore del Vomero. ' +
       'Uno spazio accogliente dove movimento, energia e femminilità si incontrano.',
-    images: ['/og-image.jpg'],
+    images: ['/additional/og.jpg'],
   },
 
   icons: {

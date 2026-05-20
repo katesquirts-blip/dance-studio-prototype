@@ -62,7 +62,14 @@ export const brand = {
   primaryLocation: "Vomero",
   secondaryLocation: "Napoli",
   cityLine: "Napoli (NA)",
-  hours: "Orari in aggiornamento.",
+  hours:
+    "Mercoledì: 10:00-23:00\n" +
+    "Giovedì: 10:00-23:00\n" +
+    "Venerdì: 10:00-23:00\n" +
+    "Sabato: 10:00-23:00\n" +
+    "Domenica: 9:00-17:00\n" +
+    "Lunedì: 10:00-23:00\n" +
+    "Martedì: 10:00-23:00",
   copyright: "© 2026 Lovely Dance Beauty & Fitness",
 }
 

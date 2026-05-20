@@ -159,14 +159,7 @@ export function ContactSection({
                   <MapPin className="mt-1 h-6 w-6 flex-shrink-0 text-primary" />
                   <div>
                     <div className="mb-2 font-semibold text-foreground">Indirizzo</div>
-                    <div className="mb-2">
-                      <span className="mr-2 text-xs tracking-wider text-primary uppercase">Sede Storica</span>
-                      <span className="text-foreground">{brand.primaryLocation} - {brand.cityLine}</span>
-                    </div>
-                    <div>
-                      <span className="mr-2 text-xs tracking-wider text-primary uppercase">Nuova Sala</span>
-                      <span className="text-foreground">{brand.secondaryLocation} - {brand.cityLine}</span>
-                    </div>
+                    <div className="text-foreground">Traversa Privata Sanseverino, 15/A, 80128 Napoli NA</div>
                   </div>
                 </div>
                 <ContactLink href={brand.phoneHref} icon={<Phone className="mt-1 h-6 w-6 flex-shrink-0 text-primary transition-transform group-hover:scale-110" />} label="Telefono" value={brand.phone} />
@@ -180,7 +173,7 @@ export function ContactSection({
           <h3 className="mb-6 font-serif text-2xl font-bold text-foreground">Dove Siamo</h3>
           <div className="aspect-video w-full overflow-hidden rounded-sm border border-border md:aspect-[21/9]">
             <iframe
-              src="https://www.google.com/maps?q=Vomero%20Napoli&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.776146032544!2d14.230529376444268!3d40.854838328858335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b08f3526e3045%3A0x442f0db875523f4e!2sTraversa%20Privata%20Sanseverino%2C%2015%2FA%2C%2080128%20Napoli%20NA!5e0!3m2!1sen!2sit!4v1779279282364!5m2!1sen!2sit"
               width="100%"
               height="100%"
               style={{ border: 0 }}
