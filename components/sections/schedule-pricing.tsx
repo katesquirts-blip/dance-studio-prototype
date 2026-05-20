@@ -6,7 +6,8 @@ import {
   pricingCards,
   pricingHighlights,
   salaArmoniaSchedule,
-  salaRitmoSchedule,
+  scheduleBookingServices,
+  scheduleContactInfo,
   type ScheduleDay,
 } from "@/lib/site-config"
 
@@ -19,17 +20,17 @@ function ScheduleCard({ title, subtitle, schedule }: { title: string; subtitle: 
   const [activeDayIndex, setActiveDayIndex] = useState(0)
 
   return (
-    <div className="rounded-sm border border-border bg-card p-6 sm:p-8">
+    <div className="rounded-sm border border-border/80 bg-card p-5 shadow-sm sm:p-7">
       <h3 className="mb-1 text-center font-serif text-2xl font-bold text-primary">{title}</h3>
       <p className="mb-6 text-center text-sm text-muted-foreground">{subtitle}</p>
 
       <div className="md:hidden">
-        <div className="grid grid-cols-5 gap-1 pb-4">
+        <div className="grid grid-cols-7 gap-1 pb-4">
           {schedule.map((day, index) => (
             <button
               key={day.day}
               onClick={() => setActiveDayIndex(index)}
-              className={`border py-2.5 text-[10px] font-bold tracking-tighter uppercase transition-all duration-300 ${
+              className={`border py-2 text-[9px] font-bold tracking-tighter uppercase transition-all duration-300 ${
                 activeDayIndex === index
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border bg-transparent text-muted-foreground hover:border-primary/40"
@@ -40,27 +41,27 @@ function ScheduleCard({ title, subtitle, schedule }: { title: string; subtitle: 
           ))}
         </div>
 
-        <div className="animate-in fade-in slide-in-from-bottom-2 mt-4 space-y-4 duration-500">
+        <div className="animate-in fade-in slide-in-from-bottom-2 mt-4 space-y-3 duration-500">
           {schedule[activeDayIndex].classes.map((classItem) => (
-            <div key={`${classItem.time}-${classItem.name}`} className="grid grid-cols-[70px_1fr] items-baseline gap-4 border-b border-border/20 pb-3 last:border-0 last:pb-0">
-              <span className="text-right font-sans text-xs font-bold text-primary">{classItem.time}</span>
-              <span className="text-left text-sm font-medium tracking-wide text-foreground uppercase">{classItem.name}</span>
+            <div key={`${classItem.time}-${classItem.name}`} className="grid grid-cols-[92px_1fr] items-baseline gap-3 border-b border-border/30 pb-3 last:border-0 last:pb-0">
+              <span className="text-right font-sans text-[11px] font-bold text-primary">{classItem.time}</span>
+              <span className="text-left text-[13px] font-medium leading-snug tracking-wide text-foreground uppercase">{classItem.name}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="hidden space-y-5 md:block">
+      <div className="hidden gap-6 md:grid md:grid-cols-2 xl:grid-cols-3">
         {schedule.map((day) => (
-          <div key={day.day} className="mb-5">
-            <div className="mb-2 border-b border-border pb-1 text-center font-sans text-sm font-semibold text-foreground uppercase">
+          <div key={day.day}>
+            <div className="mb-2 border-b border-border pb-1 text-center font-sans text-xs font-semibold tracking-wide text-foreground uppercase">
               {day.day}
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {day.classes.map((classItem) => (
-                <div key={`${classItem.time}-${classItem.name}`} className="grid grid-cols-[80px_1fr] items-baseline gap-4 border-b border-border/20 pb-2 last:border-0 last:pb-0">
-                  <span className="text-right font-sans text-sm font-bold text-primary">{classItem.time}</span>
-                  <span className="text-left text-sm font-medium tracking-wide text-foreground uppercase">{classItem.name}</span>
+                <div key={`${classItem.time}-${classItem.name}`} className="grid grid-cols-[92px_1fr] items-baseline gap-3 border-b border-border/25 pb-2 last:border-0 last:pb-0">
+                  <span className="text-right font-sans text-xs font-bold text-primary">{classItem.time}</span>
+                  <span className="text-left text-xs font-medium leading-snug tracking-wide text-foreground uppercase">{classItem.name}</span>
                 </div>
               ))}
             </div>
@@ -88,14 +89,25 @@ export function ScheduleSection({ isVisible, setSectionRef }: AnimatedSectionPro
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          <ScheduleCard title="Sala Armonia" subtitle="Vomero" schedule={salaArmoniaSchedule} />
-          <ScheduleCard title="Sala Ritmo" subtitle="Napoli" schedule={salaRitmoSchedule} />
+        <div className="grid gap-6">
+          <ScheduleCard title="Orario Settimanale" subtitle="Lovely Dance Beauty & Fitness" schedule={salaArmoniaSchedule} />
         </div>
 
-        <p className="mt-6 text-center text-sm text-muted-foreground italic">
-          * Gli orari possono variare - contattaci per confermare. Durante l&apos;anno accademico sono previsti lo
-          Spettacolo Natalizio, lo Spettacolo di Fine Anno e vari eventi socio-culturali.
+        <div className="mt-6 rounded-sm border border-border/80 bg-card p-5 text-center sm:p-6">
+          <h3 className="font-serif text-xl font-bold text-primary">Servizi su prenotazione</h3>
+          <div className="mt-4 grid gap-3 text-sm font-medium text-foreground md:grid-cols-3">
+            {scheduleBookingServices.map((service) => (
+              <div key={service} className="border-b border-border/30 pb-3 last:border-0 md:border-b-0 md:border-r md:last:border-r-0 md:pb-0">
+                {service}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-6 text-center text-sm leading-relaxed text-muted-foreground">
+          {scheduleContactInfo.address}
+          <br />
+          {scheduleContactInfo.phone}
         </p>
       </div>
     </section>

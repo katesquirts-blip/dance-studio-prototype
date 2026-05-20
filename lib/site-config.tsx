@@ -1,12 +1,9 @@
 import {
-  Activity,
   Calendar,
   CalendarRange,
   Crown,
   Flame,
   Heart,
-  Music,
-  Sparkles,
   Star,
   Tag,
   Ticket,
@@ -90,74 +87,18 @@ export const courseCategories: CourseCategory[] = [
     label: "Dance",
     courses: [
       {
-        title: "Danza Classica",
-        age: "Tutti i livelli",
-        description: "Tecnica, postura e musicalita per un percorso elegante e progressivo.",
-        image: "/488642768_2081867468995252_8593027666977621862_n.jpg",
-        Icon: Music,
-      },
-      {
-        title: "Social Dance",
-        age: "Adulti",
-        description: "Balli sociali per divertirti, muoverti con sicurezza e vivere la musica in compagnia.",
-        image: "/male_female_duo.jpg",
-        Icon: Star,
-      },
-      {
-        title: "Hip Hop Kids",
-        age: "Kids",
-        description: "Energia, ritmo e coordinazione per bambini che vogliono muoversi con stile.",
-        image: "/student_male.jpg",
-        Icon: Zap,
-      },
-      {
         title: "Salsa Nightclub Style",
         age: "Adulti",
         description: "Salsa dinamica e scenica con un taglio moderno, sociale e da pista.",
-        image: "/female_pair_modern_dance.jpg",
+        image: "/additional/salsa-lovely-dance.jpg",
         Icon: Zap,
-      },
-      {
-        title: "Burlesque",
-        age: "Adulti",
-        description: "Espressivita, femminilita e presenza scenica in una lezione elegante e ironica.",
-        image: "/student_green_dress.jpg",
-        Icon: Sparkles,
       },
       {
         title: "Caraibico",
         age: "Tutti i livelli",
         description: "Ritmi caraibici per lavorare su energia, musicalita e movimento del corpo.",
-        image: "/male_female_duo.jpg",
+        image: "/additional/carabico-lovely-dance.jpg",
         Icon: Flame,
-      },
-      {
-        title: "Danze Popolari",
-        age: "Tutti i livelli",
-        description: "Tradizione, ritmo e socialita attraverso danze coinvolgenti e accessibili.",
-        image: "/group_outside_.jpg",
-        Icon: Users,
-      },
-      {
-        title: "Kizomba",
-        age: "Adulti",
-        description: "Connessione, fluidita e movimento morbido per scoprire uno stile sensuale e musicale.",
-        image: "/theatre_dance_pair.jpg",
-        Icon: Heart,
-      },
-      {
-        title: "Bachata Fusion",
-        age: "Adulti",
-        description: "Bachata con contaminazioni moderne per migliorare musicalita, tecnica e interpretazione.",
-        image: "/male_female_duo.jpg",
-        Icon: Music,
-      },
-      {
-        title: "Salsa Cubana",
-        age: "Tutti i livelli",
-        description: "Ritmo, energia e socialita nello stile cubano, dalle basi alle combinazioni piu dinamiche.",
-        image: "/danza_comp.jpg",
-        Icon: Wind,
       },
     ],
   },
@@ -168,82 +109,21 @@ export const courseCategories: CourseCategory[] = [
         title: "Yoga",
         age: "Tutti i livelli",
         description: "Pratica morbida per respirare meglio, sciogliere tensioni e recuperare calma mentale.",
-        image: "/inside_school_children_lesson.jpg",
+        image: "/additional/yoga-lovely-dance.jpg",
         Icon: Wind,
-      },
-      {
-        title: "Postural Pilates",
-        age: "Tutti i livelli",
-        description: "Controllo, postura e consapevolezza per rinforzare il corpo in modo equilibrato.",
-        image: "/fitness.jpg",
-        Icon: Heart,
-      },
-      {
-        title: "Ginnastica Posturale",
-        age: "Adulti",
-        description: "Esercizi mirati per migliorare postura, mobilita e benessere quotidiano.",
-        image: "/fitness.jpg",
-        Icon: Activity,
       },
       {
         title: "Ginnastica Dolce",
         age: "Adulti",
         description: "Movimento leggero e progressivo per mantenersi attivi con cura e continuita.",
-        image: "/fitness.jpg",
+        image: "/additional/ginastica-dolce-lovelydance.jpg",
         Icon: Heart,
-      },
-      {
-        title: "Aerobica",
-        age: "Adulti",
-        description: "Allenamento cardio a ritmo di musica per energia, resistenza e tono.",
-        image: "/Zmba_training.jpg",
-        Icon: Flame,
-      },
-      {
-        title: "Biodanza",
-        age: "Adulti",
-        description: "Movimento, emozione e musica per un'esperienza di benessere e connessione.",
-        image: "/air_dance_student.jpg",
-        Icon: Sparkles,
       },
       {
         title: "Meditazione Zen",
         age: "Tutti i livelli",
         description: "Pratiche di presenza e respirazione per ritrovare calma, equilibrio e centratura.",
-        image: "/inside_school_children_lesson.jpg",
-        Icon: Star,
-      },
-    ],
-  },
-  {
-    label: "Beauty / Lifestyle",
-    courses: [
-      {
-        title: "Make-Up Fashion",
-        age: "Su prenotazione",
-        description: "Sessioni dedicate al make-up e allo stile per valorizzare immagine e personalita.",
-        image: "/student_blue_dress.jpg",
-        Icon: Sparkles,
-      },
-      {
-        title: "Nutritional Consultation",
-        age: "Nutrizionista in sede",
-        description: "Consulenze nutrizionali in sede per accompagnare benessere, energia e obiettivi personali.",
-        image: "/fitness.jpg",
-        Icon: Heart,
-      },
-      {
-        title: "Personal Trainer Sessions",
-        age: "Su prenotazione",
-        description: "Percorsi individuali con personal trainer per allenarti in modo mirato e personalizzato.",
-        image: "/Zmba_training.jpg",
-        Icon: Activity,
-      },
-      {
-        title: "Private Dance & Fitness Lessons",
-        age: "Su prenotazione",
-        description: "Lezioni private di danza e fitness per lavorare sui tuoi obiettivi con attenzione dedicata.",
-        image: "/female_pair_modern_dance.jpg",
+        image: "/additional/meditaziona-lovely-dance.jpg",
         Icon: Star,
       },
     ],
@@ -251,10 +131,9 @@ export const courseCategories: CourseCategory[] = [
 ]
 
 export const featuredGalleryPhotos = [
-  { src: "/additional/coppia-balletto-ateneo-agropoli-3.webp", alt: "Coppia in scena" },
-  { src: "/additional/females-group-perform.webp", alt: "Gruppo femminile in scena" },
-  { src: "/additional/coppia-performance-palcoscenico-2.webp", alt: "Coppia performance palcoscenico" },
-  { src: "/female_pair_modern_dance.jpg", alt: "Coppia femminile danza moderna" },
+  { src: "/additional/nostri-moenti1.jpg", alt: "Lovely Dance momento in sala" },
+  { src: "/additional/nostri-momenti-lovely-dance.jpg", alt: "Lovely Dance gruppo" },
+  { src: "/additional/nostri-momenti2.jpg", alt: "Lovely Dance lezione" },
 ]
 
 export const allGalleryPhotos = [
@@ -304,23 +183,92 @@ export const allGalleryPhotos = [
   "/additional/donne-performance-ateneo-agropoli-2.webp",
 ]
 
-export const reels = ["/reel1.mp4", "/reel2.mp4", "/reel3.mp4"]
-
 export const salaArmoniaSchedule: ScheduleDay[] = [
-  { day: "LUNEDÌ", classes: [{ time: "10:00", name: "Benessere Mamme | Pilates | Aerobica" }, { time: "17:00", name: "Predanza" }, { time: "18:15", name: "Aerobica" }, { time: "19:15", name: "Moderno Avanzato" }] },
-  { day: "MARTEDÌ", classes: [{ time: "10:00", name: "Danza Per Adulti" }, { time: "16:00", name: "Moderno Principianti II" }, { time: "17:00", name: "Classico Principianti II" }, { time: "18:00", name: "Moderno Intermedio" }, { time: "19:00", name: "Danza Aerea" }] },
-  { day: "MERCOLEDÌ", classes: [{ time: "10:00", name: "Benessere Mamme | Pilates | Aerobica" }, { time: "16:00", name: "Danza Aerea Kids" }, { time: "17:00", name: "Predanza" }, { time: "18:15", name: "Aerobica" }, { time: "19:15", name: "Danza Aerea Avanzato" }] },
-  { day: "GIOVEDÌ", classes: [{ time: "10:00", name: "Danza Per Adulti" }, { time: "16:00", name: "Moderno Principianti II" }, { time: "17:00", name: "Classico Principianti II" }, { time: "18:00", name: "Moderno Intermedio" }, { time: "19:00", name: "Bungee Dance | Danza Aerea | Discipline a Richiesta" }] },
-  { day: "VENERDÌ", classes: [{ time: "16:00", name: "Danza Aerea Principianti" }, { time: "17:00-18:30", name: "Recitazione" }, { time: "19:00", name: "Workshop con Professionisti" }] },
+  {
+    day: "LUNEDÌ",
+    classes: [
+      { time: "10:00–11:00", name: "Social Dance" },
+      { time: "11:00–12:00", name: "Postural Pilates" },
+      { time: "14:00–15:00", name: "Aerobica" },
+      { time: "17:00–18:00", name: "Ginnastica Dolce" },
+      { time: "19:00–20:00", name: "Fit Pilates" },
+      { time: "20:30–21:30", name: "KDX Kalù Kizomba" },
+      { time: "21:30–22:30", name: "KDX Kalù Bachata Fusion" },
+      { time: "22:30–23:30", name: "KDX Kalù Salsa Cubana" },
+    ],
+  },
+  {
+    day: "MARTEDÌ",
+    classes: [
+      { time: "12:00–13:00", name: "Yoga" },
+      { time: "14:00–15:00", name: "Ginnastica Posturale" },
+      { time: "17:00–18:00", name: "Ginnastica Dolce" },
+      { time: "18:00–19:00", name: "Hip Hop Kids" },
+      { time: "19:30–20:30", name: "Zumba" },
+      { time: "20:30–21:30", name: "Salsa Nightclub Style I" },
+      { time: "21:30–22:30", name: "Salsa Nightclub Style II" },
+      { time: "22:30–23:30", name: "Salsa Nightclub Style III" },
+    ],
+  },
+  {
+    day: "MERCOLEDÌ",
+    classes: [
+      { time: "11:30–12:30", name: "Danza Classica Amatoriale" },
+      { time: "14:00–15:00", name: "Aerobica" },
+      { time: "16:00–18:00", name: "Dizione e Lettura Espressiva" },
+      { time: "18:00–19:00", name: "Burlesque" },
+      { time: "19:00–20:00", name: "Fit Pilates" },
+      { time: "20:30–21:30", name: "Caraibico Principianti" },
+      { time: "21:30–22:30", name: "Caraibico Intermedi / Avanzati" },
+    ],
+  },
+  {
+    day: "GIOVEDÌ",
+    classes: [
+      { time: "10:00–11:00", name: "Postural Pilates" },
+      { time: "11:00–12:00", name: "Social Dance" },
+      { time: "14:00–15:00", name: "Ginnastica Posturale" },
+      { time: "17:00–18:00", name: "Ginnastica Dolce" },
+      { time: "18:30–19:30", name: "Biodanza" },
+      { time: "19:30–20:30", name: "Biodanza" },
+      { time: "20:30–21:30", name: "Salsa Nightclub Style I" },
+      { time: "21:30–22:30", name: "Salsa Nightclub Style II" },
+      { time: "22:30–23:30", name: "Salsa Nightclub Style III" },
+    ],
+  },
+  {
+    day: "VENERDÌ",
+    classes: [
+      { time: "14:00–15:00", name: "Aerobica" },
+      { time: "18:00–19:00", name: "Yoga" },
+    ],
+  },
+  {
+    day: "SABATO",
+    classes: [
+      { time: "11:00–12:00", name: "Yoga" },
+      { time: "15:30–16:30", name: "Make-Up Fashion" },
+      { time: "17:00–18:00", name: "Danze Popolari" },
+    ],
+  },
+  {
+    day: "DOMENICA",
+    classes: [{ time: "10:00–12:30", name: "Meditazione Zen" }],
+  },
 ]
 
-export const salaRitmoSchedule: ScheduleDay[] = [
-  { day: "LUNEDÌ", classes: [{ time: "17:00", name: "Predanza" }, { time: "18:15", name: "Aerobica | GAG" }, { time: "19:15", name: "Modern Avanzato" }] },
-  { day: "MARTEDÌ", classes: [{ time: "16:00", name: "Danza Classica Principianti" }, { time: "17:00", name: "Danza Moderna Principianti" }, { time: "18:00", name: "Modern Intermedio" }, { time: "19:15", name: "Danza Classica Intermedio" }] },
-  { day: "MERCOLEDÌ", classes: [{ time: "15:00", name: "Aerobica | Step | GAG" }, { time: "17:00", name: "Predanza" }, { time: "18:15", name: "Aerobica | Step | GAG" }, { time: "19:15", name: "Musical" }] },
-  { day: "GIOVEDÌ", classes: [{ time: "16:00", name: "Danza Classica Principianti" }, { time: "17:00", name: "Danza Moderna Principianti" }, { time: "18:00", name: "Modern Intermedio" }, { time: "19:15", name: "Danza Classica Intermedio" }, { time: "20:15", name: "Danza Contemporanea" }] },
-  { day: "VENERDÌ", classes: [{ time: "15:00", name: "Aerobica e GAG" }, { time: "16:30", name: "Fiabe in Movimento" }, { time: "18:15", name: "Aerobica | Step | GAG" }, { time: "19:15", name: "Modern Avanzato" }] },
+export const salaRitmoSchedule = salaArmoniaSchedule
+
+export const scheduleBookingServices = [
+  "Lezioni individuali con Personal Trainer",
+  "Lezioni private settore danza e fitness",
+  "Nutrizionista in sede",
 ]
+
+export const scheduleContactInfo = {
+  address: "Traversa Privata Sanseverino 15/A — Vomero, Napoli",
+  phone: "Tel. 331 4913070 / 349 8737169",
+}
 
 export const pricingCards = [
   { Icon: Ticket, title: "Lezione Singola", description: "Ideale per provare un corso prima di iscriverti. Nessun impegno, massima flessibilità." },

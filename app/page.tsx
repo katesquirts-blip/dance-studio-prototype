@@ -21,14 +21,7 @@ export default function DanceStudioTemplate() {
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const intersectingRef = useRef<Map<string, number>>(new Map())
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({})
-  const [galleryOpen, setGalleryOpen] = useState(false)
   const [enlargedPhoto, setEnlargedPhoto] = useState<string | null>(null)
-  const videoRefs = [
-    useRef<HTMLVideoElement>(null),
-    useRef<HTMLVideoElement>(null),
-    useRef<HTMLVideoElement>(null),
-  ]
-  const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set())
   const [bioOpen, setBioOpen] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formErrors, setFormErrors] = useState<{ [key: string]: boolean }>({})
@@ -36,8 +29,6 @@ export default function DanceStudioTemplate() {
   const [cookieVisible, setCookieVisible] = useState(false)
   const [cookieFading, setCookieFading] = useState(false)
   const [whatsappHover, setWhatsappHover] = useState(false)
-  const [visibleCount, setVisibleCount] = useState(20)
-  const [reelsExpanded, setReelsExpanded] = useState(false)
   const [coursesExpanded, setCoursesExpanded] = useState(false)
 
   const setSectionRef = (id: string, element: HTMLElement | null) => {
@@ -100,23 +91,22 @@ export default function DanceStudioTemplate() {
   }, [])
 
   useEffect(() => {
-    document.body.style.overflow = galleryOpen || enlargedPhoto ? "hidden" : ""
+    document.body.style.overflow = enlargedPhoto ? "hidden" : ""
     return () => {
       document.body.style.overflow = ""
     }
-  }, [galleryOpen, enlargedPhoto])
+  }, [enlargedPhoto])
 
   useEffect(() => {
-    if (!galleryOpen && !enlargedPhoto) return
+    if (!enlargedPhoto) return
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        if (enlargedPhoto) setEnlargedPhoto(null)
-        else if (galleryOpen) setGalleryOpen(false)
+        setEnlargedPhoto(null)
       }
     }
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [galleryOpen, enlargedPhoto])
+  }, [enlargedPhoto])
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -148,17 +138,8 @@ export default function DanceStudioTemplate() {
       <GallerySection
         isVisible={visibleSections.has("gallery")}
         setSectionRef={setSectionRef}
-        galleryOpen={galleryOpen}
-        setGalleryOpen={setGalleryOpen}
         enlargedPhoto={enlargedPhoto}
         setEnlargedPhoto={setEnlargedPhoto}
-        visibleCount={visibleCount}
-        setVisibleCount={setVisibleCount}
-        reelsExpanded={reelsExpanded}
-        setReelsExpanded={setReelsExpanded}
-        videoRefs={videoRefs}
-        playingVideos={playingVideos}
-        setPlayingVideos={setPlayingVideos}
       />
       <ContactSection
         isVisible={visibleSections.has("contatti")}
