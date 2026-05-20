@@ -24,7 +24,7 @@ const dancingScript = Dancing_Script({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.lovelydancevomero.it'),
+  metadataBase: new URL('https://dance-studio-prototype.vercel.app'),
 
   title: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: 'website',
-    url: 'https://www.lovelydancevomero.it',
+    url: 'https://dance-studio-prototype.vercel.app',
     siteName: 'Lovely Dance Beauty & Fitness',
     title: 'Lovely Dance Beauty & Fitness  Vomero, Napoli',
     description:
